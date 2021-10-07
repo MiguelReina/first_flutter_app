@@ -18,6 +18,26 @@ class DescriptionPlace extends StatelessWidget {
         color: Color(0xfff2c611),
       ),
     );
+    final starHalf = Container(
+      margin: EdgeInsets.only(
+        top: 323.0,
+        right: 3.0,
+      ),
+      child: Icon(
+        Icons.star_half,
+        color: Color(0xfff2c611),
+      ),
+    );
+    final starEmpty = Container(
+      margin: EdgeInsets.only(
+        top: 323.0,
+        right: 3.0,
+      ),
+      child: Icon(
+        Icons.star_border_outlined,
+        color: Color(0xfff2c611),
+      ),
+    );
     final description = Container(
       margin: EdgeInsets.only(
         top: 20.0,
@@ -27,6 +47,7 @@ class DescriptionPlace extends StatelessWidget {
       child: Text(
         descriptionPlace,
         style: TextStyle(
+          fontFamily: "Lato",
           fontSize: 16.0,
           fontWeight: FontWeight.bold,
           color: Color(0xff56575a),
@@ -44,6 +65,7 @@ class DescriptionPlace extends StatelessWidget {
           child: Text(
             namePlace,
             style: TextStyle(
+              fontFamily: "Lato",
               fontSize: 30.0,
               fontWeight: FontWeight.w900,
             ),
@@ -51,7 +73,7 @@ class DescriptionPlace extends StatelessWidget {
           ),
         ),
         Row(
-          children: [star, star, star, star, star],
+          children: [star, star, star, starHalf, starEmpty],
         )
       ],
     );
